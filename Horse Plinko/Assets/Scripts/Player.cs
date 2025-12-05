@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
         Vector3 offset = new Vector3(movementX, 0, 0);
         transform.position += offset;
 
+        Vector3 horseOffset = new Vector3 (0, +1, 0);
         if (Input.GetButtonDown("Jump"))
         {
-            Instantiate(horse, transform.position, transform.rotation);
+            Instantiate(horse, transform.position - horseOffset, transform.rotation);
         }
     }
 }
